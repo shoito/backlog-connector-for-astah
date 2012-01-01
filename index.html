@@ -1,100 +1,175 @@
 <!DOCTYPE html>
+<!-- Fork from http://coreh.github.com/nide/ -->
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>shoito/backlog-connector-for-astah @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #63fe0f;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #9c01f0; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #9c01f0; }
-    h3 { text-align: center; color: #9c01f0; }
-    a { color: #9c01f0; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+	<meta charset="utf-8">
+	<title>Backlog Connector for astah</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		setInterval(function() {
+			$('.highlight').animate({
+				opacity : 0.5
+			}, 1000).animate({
+				opacity : 1
+			}, 1000)
+		}, 2000)
+	</script>
 </head>
-
 <body>
-  <a href="https://github.com/shoito/backlog-connector-for-astah"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/shoito/backlog-connector-for-astah/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/shoito/backlog-connector-for-astah/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+  <a href="http://github.com/shoito/backlog-connector-for-astah"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+  <div id="gallery">
+    <div id="menu">
+	<ul class="menu">
+		<li class="menuItem"><a href="">About</a></li>
+		<li class="menuItem"><a href="">Screenshots</a></li>
+		<li class="menuItem"><a href="">Features</a></li>
+    </ul>
+	</div>
+	<div id="wrapper">
+    <div id="slides">
+    <div class="slide initial">
+		<h1>Backlog x Astah</h1>
+		<h2>Backlog Connector for astah</h2>
+		<div class="description">
+			<p>ソフトウェア設計支援ツール <a href="http://astah.change-vision.com/" target="_blank">astah(旧JUDE)</a> から、<a href="http://www.backlog.jp/" target="_blank">Backlog</a>の課題を確認/作成/編集ができるastahプラグインです。</p>
+		 	<p><a href="http://astah.change-vision.com/astah-community.var" target="_blank">astah community</a>, <a href="http://astah.change-vision.com/astah-uml.var" target="_blank">UML</a>, <a href="http://astah.change-vision.com/astah-professional.var" target="_blank">professional</a>の何れかにインストールして利用します。なお、プラグインはastahのバージョン6.5以上で動作します。</p>
+		</div>
+		<h2>Demo</h2>
+		<div class="description wide">
+			<p>
+				<object style="height: 293px; width: 480px"><param name="movie" value="http://www.youtube.com/v/kh61BBOTyRg?version=3&amp;feature=player_embedded"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/kh61BBOTyRg?version=3&amp;feature=player_embedded" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="480" height="293"></object>
+			</p>
+		</div>
+		<br>
+		<br>
+		<h2>Try it out!</h2>
+		<div class="description">
+			<p>Backlog Connector for astahは、astahにインストールするプラグインとしてデザインされています。</p>
+			<ol>
+				<li>各OS用のastahインストーラーをダウンロードして、astahをインストールします。<br>
+					<a href="http://astah.change-vision.com/ja/product/astah-community.html" target="_blank">http://astah.change-vision.com/ja/product/astah-community.html</a>
+				</li>
+				<li>
+					<div><a href="https://github.com/downloads/shoito/backlog-connector-for-astah/connector-backlog-0.1.0.jar" target="_blank">connector-backlog-x.x.x.jar</a>を astahインストールフォルダ/plugins に配置してください。アンインストールしたい場合は.jarファイルを削除します。
+						<p>Mac OS X</p>
+						<pre>/Applications/astah community/plugins</pre>
+						<p>Windows</p>
+						<pre>C:¥Program Files¥astah-community¥plugins</pre>
+					</div>
+				</li>
+			</ol>
+		</div>
+		<h2>Best Tools</h2>
+		<div class="description">
+			<a href="http://www.backlog.jp/" target="_blank"><img alt="Backlog" src="images/backlog.png"/></a><a href="http://astah.change-vision.com" target="_blank"><img alt="astah" src="images/astah.png"/></a>
+		</div>
+		<br>
+		<div class="description wide">
+			<p><iframe src="http://www.facebook.com/plugins/like.php?href=http://shoito.github.com/backlog-connector-for-astah&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></p>
+			<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<div class="g-plusone" data-annotation="inline">
+				<script type="text/javascript">
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+			</div>
+		</div>
+	</div>
+    <div class="slide">
+		<div class="highlight" style="left: 540px; top: 585px">
+			<div class="highlight-content">
+				<b>Backlog課題ビュー</b>
+				<p>Backlog上の課題一覧を確認できる。URLを選択して、ブラウザでBacklogのページを開くこともできる。</p>
+			</div>
+		</div>
+		<div class="highlight" style="left: 346px; top: 618px">
+			<div class="highlight-content right">
+				<b>課題作成</b>
+				<p>件名や詳細、種類、優先度を設定して、Backlogに課題を新規に追加できる。</p>
+				<img alt="課題作成" src="images/ss1.png" />
+			</div>
+		</div>
+		<div class="highlight" style="left: 700px; top: 618px">
+			<div class="highlight-content">
+				<b>プロジェクト切り替え</b>
+				<p>Backlogの接続先プロジェクトを切り替えることができる。</p>
+			</div>
+		</div>
+		<div class="highlight" style="left: 820px; top: 618px">
+			<div class="highlight-content right">
+				<b>Backlog接続先設定</b>
+				<p>astahから接続するBacklogの接続情報を編集できる。</p>
+				<img alt="Backlog接続先設定" src="images/ss2.png" />
+			</div>
+		</div>
+		<img src="images/ss0.png" class="fade" alt="side" />
+		<div class="description wide">
+			<p><iframe src="http://www.facebook.com/plugins/like.php?href=http://shoito.github.com/backlog-connector-for-astah&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></p>
+			<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<div class="g-plusone" data-annotation="inline">
+				<script type="text/javascript">
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+			</div>
+		</div>
+	</div>
+    <div class="slide">
+		<h2 class="top">Features</h2>
+    	<div class="description wide">
+			<ul>
+				<li>astahからBacklogに接続できる</li>
+				<li>Backlog上の課題をastahの拡張ビューで確認できる</li>
+				<li>Backlog上の課題をastahから編集できる</li>
+				<li>Backlog上の課題ページをastahからダイレクトに開くことができる</li>
+			</ul>
+			<a href="http://www.backlog.jp/" target="_blank"><img alt="Backlog" src="images/backlog_ss.png" /></a>
+	    </div>
+	    <br>
+	    <h2>Source Code</h2>
+	    <div class="description wide">
+	    	<p><a href="https://github.com/shoito/backlog-connector-for-astah">https://github.com/shoito/backlog-connector-for-astah</a></p>
+	    </div>
+	    <br>
+		<h2>License</h2>
+		<div class="description wide">
+			<p>Licensed under the Apache License, Version 2.0</p>
+		</div>
+		<div class="description wide">
+			<p><iframe src="http://www.facebook.com/plugins/like.php?href=http://shoito.github.com/backlog-connector-for-astah&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></p>
+			<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<div class="g-plusone" data-annotation="inline">
+				<script type="text/javascript">
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+			</div>
+		</div>
     </div>
-
-    <h1><a href="https://github.com/shoito/backlog-connector-for-astah">Backlog Connector for astah</a>
-      <span class="small">by <a href="https://github.com/shoito">shoito</a></span></h1>
-
-    <div class="description">
-      
-    </div>
-
-    
-
-    
-
-    
-
-    
-      <h2>License</h2>
-      <p>Apache License Version 2.0</p>
-    
-
-    
-      <h2>Authors</h2>
-      <p>shoito</p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>@shoito<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/shoito/backlog-connector-for-astah/zipball/master">zip</a> or
-      <a href="https://github.com/shoito/backlog-connector-for-astah/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/shoito/backlog-connector-for-astah</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/shoito/backlog-connector-for-astah">shoito/backlog-connector-for-astah</a>
-    </div>
-
-  </div>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-677679-11");
-pageTracker._trackPageview();
-} catch(err) {}</script>"
+	</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-677679-11");
+		pageTracker._trackPageview();
+		} catch(err) {}
+	</script>"
 </body>
 </html>
