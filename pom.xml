@@ -160,7 +160,7 @@
 			<plugin>
 				<groupId>com.change_vision.astah</groupId>
 				<artifactId>astah-maven-plugin</artifactId>
-				<version>0.8</version>
+				<version>0.9.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.ops4j</groupId>

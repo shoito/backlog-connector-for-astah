@@ -89,12 +89,7 @@ public class IssueListTabView extends JPanel implements IPluginExtraTabView {
 			@Override
 			public void itemStateChanged(ItemEvent event) {
 				if (event.getStateChange() == ItemEvent.SELECTED) {
-					Object project = event.getItem();
-					if (!(project instanceof Project)) {
-						return;
-					}
-					
-					issueTable.setCurrentProject((Project) project);
+					setCurrentProjectTo(issueTable, event.getItem());
 				}
 			}
 		});
@@ -148,6 +143,10 @@ public class IssueListTabView extends JPanel implements IPluginExtraTabView {
     }
 
     private void reloadButtonActionPerformed(ActionEvent evt) {
+    	Project currentProject = issueTable.getCurrentProject();
+    	if (currentProject == null) {
+    		setCurrentProjectTo(issueTable, projectModel.getSelectedItem());
+    	}
         controller.loadIssuesFromCurrentProject();
     }
 
@@ -164,6 +163,14 @@ public class IssueListTabView extends JPanel implements IPluginExtraTabView {
         dialog.setModal(true);
         dialog.setVisible(true);
     }
+    
+	private void setCurrentProjectTo(IssueTable issueTable, Object currentProject) {
+		if (!(currentProject instanceof Project)) {
+			return;
+		}
+		
+		issueTable.setCurrentProject((Project) currentProject);
+	}
 
     private JToolBar buttonBar;
     private JButton createButton;
