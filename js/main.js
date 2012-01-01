@@ -39,10 +39,6 @@ $(document).ready(function(){
 			
 			e.preventDefault();
 			/* Prevent the default action of the link */
-			
-			
-			// Stopping the auto-advance if an icon has been clicked:
-			if(!keepScroll) clearInterval(itvl);
 	});
 	
 	$('#menu ul li.menuItem:first').addClass('act').siblings().addClass('inact');
