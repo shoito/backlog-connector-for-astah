@@ -6,15 +6,37 @@
 	<title>Backlog Connector for astah</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.socialbutton-1.8.1.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
+	$(function() {
 		setInterval(function() {
 			$('.highlight').animate({
 				opacity : 0.5
 			}, 1000).animate({
 				opacity : 1
 			}, 1000)
-		}, 2000)
+		}, 2000);
+	    
+	    $('.google_plus').socialbutton('google_plusone', {
+	    	lang: 'ja',
+	    	size: 'tall'
+	    });
+	    
+	    $('.hatena').socialbutton('hatena', {
+	    	button: 'vertical'
+	    });
+	    
+	    $('.twitter').socialbutton('twitter', {
+	    	button: 'vertical',
+	    	via: 'shoito',
+	    	url: 'http://shoito.github.com/backlog-connector-for-astah/'
+	    });
+	    
+	    $('.facebook_like').socialbutton('facebook_like', {
+	    	button: 'box_count'
+	    });
+	});
 	</script>
 </head>
 <body>
@@ -66,10 +88,11 @@
 			<a href="http://www.backlog.jp/" target="_blank"><img alt="Backlog" src="images/backlog.png"/></a><a href="http://astah.change-vision.com" target="_blank"><img alt="astah" src="images/astah.png"/></a>
 		</div>
 		<br>
-		<div class="description wide">
-			<p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fshoito.github.com%2Fbacklog-connector-for-astah%2F&layout=standard&show_faces=true&width=300&action=like&colorscheme=light&height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></p>
-			<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-			<div class="g-plusone" data-annotation="inline" data-href="http://shoito.github.com/backlog-connector-for-astah/"></div>
+		<div class="description social clearfix">
+			<div class="google_plus"></div>
+			<div class="hatena"></div>
+			<div class="twitter"></div>
+			<div class="facebook_like"></div>
 		</div>
 	</div>
     <div class="slide">
@@ -100,10 +123,11 @@
 			</div>
 		</div>
 		<img src="images/ss0.png" class="fade" alt="side" />
-		<div class="description wide">
-			<p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fshoito.github.com%2Fbacklog-connector-for-astah%2F&layout=standard&show_faces=true&width=300&action=like&colorscheme=light&height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></p>
-			<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-			<div class="g-plusone" data-annotation="inline" data-href="http://shoito.github.com/backlog-connector-for-astah/"></div>
+		<div class="description social clearfix">
+			<div class="google_plus"></div>
+			<div class="hatena"></div>
+			<div class="twitter"></div>
+			<div class="facebook_like"></div>
 		</div>
 	</div>
     <div class="slide">
@@ -127,30 +151,16 @@
 		<div class="description wide">
 			<p>Licensed under the Apache License, Version 2.0</p>
 		</div>
-		<div class="description wide">
-			<p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fshoito.github.com%2Fbacklog-connector-for-astah%2F&layout=standard&show_faces=true&width=300&action=like&colorscheme=light&height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></p>
-			<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-			<div class="g-plusone" data-annotation="inline" data-href="http://shoito.github.com/backlog-connector-for-astah/"></div>
+		<div class="description social clearfix">
+			<div class="google_plus"></div>
+			<div class="hatena"></div>
+			<div class="twitter"></div>
+			<div class="facebook_like"></div>
 		</div>
     </div>
 	</div>
 	</div>
 	</div>
-	
-	<script type="text/javascript">
-		window.___gcfg = {
-			lang : 'ja'
-		};
-
-		(function() {
-			var po = document.createElement('script');
-			po.type = 'text/javascript';
-			po.async = true;
-			po.src = 'https://apis.google.com/js/plusone.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(po, s);
-		})();
-	</script>
 
 	<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
