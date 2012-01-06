@@ -6,7 +6,7 @@
 	<meta name="google-site-verification" content="wHjwfe_c5CLurLTRMv3dUvKL6DcWdQHZ9p8zGgFmjVs" />
 	<title>Backlog Connector for astah</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/lib/jquery.socialbutton-1.8.1.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
@@ -14,10 +14,10 @@
 		setInterval(function() {
 			$('.highlight').animate({
 				opacity : 0.5
-			}, 1000).animate({
+			}, 1200).animate({
 				opacity : 1
-			}, 1000)
-		}, 2000);
+			}, 1200)
+		}, 2400);
 	    
 	    $('.google_plus').socialbutton('google_plusone', {
 	    	lang: 'ja',
@@ -55,9 +55,8 @@
     <div class="slide initial">
 		<h1>Backlog x Astah</h1>
 		<h2>Backlog Connector for astah</h2>
-		<div class="description">
-			<p>ソフトウェア設計支援ツール <a href="http://astah.change-vision.com/" target="_blank">astah(旧JUDE)</a> から、<a href="http://www.backlog.jp/" target="_blank">Backlog</a>の課題を確認/作成/編集ができるastahプラグインです。</p>
-		 	<p><a href="http://astah.change-vision.com/astah-community.var" target="_blank">astah community</a>, <a href="http://astah.change-vision.com/astah-uml.var" target="_blank">UML</a>, <a href="http://astah.change-vision.com/astah-professional.var" target="_blank">professional</a>の何れかにインストールして利用します。なお、プラグインはastahのバージョン6.5以上で動作します。</p>
+		<div class="description wide">
+			<p>ソフトウェア設計支援ツール <a href="http://astah.change-vision.com/" target="_blank">astah(旧JUDE)</a> から、プロジェクト管理ツール<a href="http://www.backlog.jp/" target="_blank">Backlog</a>の課題を確認/作成/編集ができるastahプラグインです。	<a href="http://astah.change-vision.com/astah-community.var" target="_blank">astah community</a>, <a href="http://astah.change-vision.com/astah-uml.var" target="_blank">UML</a>, <a href="http://astah.change-vision.com/astah-professional.var" target="_blank">professional</a>の何れかにインストールして利用します。なお、プラグインはastahのバージョン6.5以上で動作します。</p>
 		</div>
 		<h2>Demo</h2>
 		<div class="description wide">
@@ -75,7 +74,8 @@
 					<a href="http://astah.change-vision.com/ja/product/astah-community.html" target="_blank">http://astah.change-vision.com/ja/product/astah-community.html</a>
 				</li>
 				<li>
-					<div><a href="https://github.com/shoito/backlog-connector-for-astah/downloads" target="_blank">connector-backlog-x.x.x.jar</a>を astahインストールフォルダ/plugins に配置してください。アンインストールしたい場合は.jarファイルを削除します。
+					<div>
+						<p><a href="https://github.com/shoito/backlog-connector-for-astah/downloads" target="_blank">connector-backlog-x.x.x.jar</a>を astahインストールフォルダ/plugins に配置してください。アンインストールしたい場合は.jarファイルを削除します。</p>
 						<p>Mac OS X</p>
 						<pre>/Applications/astah community/plugins</pre>
 						<p>Windows</p>
@@ -123,7 +123,7 @@
 				<img alt="Backlog接続先設定" src="images/ss2.png" />
 			</div>
 		</div>
-		<img src="images/ss0.png" class="fade" alt="side" />
+		<div><img src="images/ss0.png" class="fade" alt="side" /></div>
 		<div class="description social clearfix">
 			<div class="google_plus"></div>
 			<div class="hatena"></div>

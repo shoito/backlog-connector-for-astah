@@ -1,214 +1,145 @@
-html {
-	background: #fafafa;
-}
-
+html { background: #fafafa }
 body {
-	font-family: 'Lucida Grande', 'Segoe UI', 'Ubuntu', sans-serif;
-	text-align: center;
-	width: 968px;
-	margin: 0 auto;
-	padding: 0;
-	text-shadow: 0 1px 0 white;
-	position: relative;
-	color: #111;
+    color: #111;
+    font-family: 'Lucida Grande', 'Segoe UI', 'Ubuntu', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 white;
+    width: 968px;
 }
-
 h1 {
-	font-family: 'Myriad Pro', 'Lucida Grande', 'Segoe UI', 'Ubuntu', sans-serif;
-	font-size: 92px;
-	margin: 90px 0 0 100px;
-	padding: 0;
-	line-height: 0.8em;
+    font-family: 'Myriad Pro', 'Lucida Grande', 'Segoe UI', 'Ubuntu', sans-serif;
+    font-size: 92px;
+    line-height: 0.8em;
+    margin: 90px 0 0 100px;
+    padding: 0;
 }
-
-h1.fit {
-	font-size: 150px;
-}
-
 h2 {
-	margin: 0 100px 0 100px;
-	padding: 0;
+    margin: 0 100px 0 100px;
+    padding: 0;
 }
-
-h2.top {
-	margin-top: 75px;
-}
-
-h2.left {
-	margin-left: 0;
-}
-
+h2.top { margin-top: 75px }
+h2.left { margin-left: 0 }
 .description {
-	margin: 0 0 0 100px;
-	width: 500px;
+    margin: 0 0 0 100px;
+    width: 560px;
 }
-
-.description.wide {
-	width: 800px;
-}
-
-a {
-	color: #12c;
-}
-
-p.center {
-	text-align: center;
-}
-
+.description li { margin: 10px 0 }
+.description.wide { width: 800px }
+a { color: #12c }
+a img { border: none }
+p.center { text-align: center }
 /* Gallery styles */
-#gallery { /* CSS3 Rounded Corners */
-	-moz-border-radius-bottomleft: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	-moz-border-radius-bottomright: 4px;
-	-webkit-border-bottom-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	/* The width of the gallery */
-	width: 968px;
-	overflow: hidden;
+#gallery {
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    /* CSS3 Rounded Corners */
+    /* The width of the gallery */
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: hidden;
+    width: 968px;
 }
-
-#slides { /* This is the slide area */
-	height: 1500px;
-	/* jQuery changes the width later on to the sum of the widths of all the slides. */
-	width: 968px;
-	overflow: hidden;
+#slides {
+    /* This is the slide area */
+    /* jQuery changes the width later on to the sum of the widths of all the slides. */
+    height: 1400px;
+    overflow: hidden;
+    width: 968px;
 }
-
 #wrapper {
-	background: white;
-	border-radius: 5px;
+    background: white;
+    border-radius: 5px;
 }
-
 .slide {
-	float: left;
-	min-height: 600px;
-	width: 968px;
-	text-align: left;
-	position: relative;
+    float: left;
+    min-height: 600px;
+    position: relative;
+    text-align: left;
+    width: 968px;
 }
-
 ul.menu {
-	margin: 20px 0 20px;
-	padding: 0;
-	background: #ddd;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 -30px 20px -10px
-		rgba(0, 0, 0, 0.1) inset;
-	border-radius: 3px;
+    background: #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 -30px 20px -10px rgba(0, 0, 0, 0.1) inset;
+    margin: 20px 0 20px;
+    padding: 0;
 }
-
-ul.menu li { /* Every thumbnail is a li element */
-	width: 120px;
-	display: inline-block;
-	list-style: none;
-	overflow: hidden;
-	padding: 8px;
-	margin: 0;
+ul.menu li.inact:hover { }
+ul.menu li.act,
+li.act:hover {
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+    color: #eee;
+    text-shadow: 0 1px 1px black;
 }
-
-ul.menu li.inact:hover {
-	
+ul.menu li.act a { cursor: default }
+ul.menu li {
+    /* Every thumbnail is a li element */
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 8px;
+    width: 120px;
 }
-
-ul.menu li.act,li.act:hover {
-	background: rgba(0, 0, 0, 0.35);
-	color: #eee;
-	text-shadow: 0 1px 1px black;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+li.menuItem a {
+    color: inherit;
+    display: block;
+    padding: 4px;
+    text-decoration: none;
 }
-
-ul.menu li.act a {
-	cursor: default;
-}
-
-li a {
-	display: block;
-	text-decoration: none;
-	padding: 4px;
-	color: inherit;
-}
-
-a img {
-	border: none;
-}
-
-.initial {
-	background: url('../images/initial.png') right 220px no-repeat;
-}
-
+.initial { background: url('../images/initial.png') right 264px no-repeat }
 .highlight {
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	background: #e11;
-	border-radius: 100px;
-	border: 5px solid white;
-	box-shadow: 0 0 2px 2px rgba(240, 18, 18, 0.5);
-	overflow: hidden;
-	cursor: pointer;
+    background: #e11;
+    border: 5px solid white;
+    border-radius: 100px;
+    box-shadow: 0 0 2px 2px rgba(240, 18, 18, 0.5);
+    cursor: pointer;
+    height: 10px;
+    overflow: hidden;
+    position: absolute;
+    width: 10px;
 }
-
-.highlight:hover {
-	overflow: visible;
-	opacity: 1 !important;
-	z-index: 1;
-}
-
+.highlight .highlight-content.right { left: -200px }
 .highlight .highlight-content {
-	position: absolute;
-	left: -25px;
-	top: 10px;
-	padding: 8px;
-	background: rgba(0, 0, 0, 0.8);
-	border-radius: 4px;
-	opacity: 0;
-	color: white;
-	text-shadow: 0 1px black;
-	min-width: 250px;
-	font-size: 90%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    color: white;
+    font-size: 90%;
+    left: -25px;
+    min-width: 250px;
+    opacity: 0;
+    padding: 8px;
+    position: absolute;
+    text-shadow: 0 1px black;
+    top: 10px;
 }
-
-.highlight .highlight-content.right {
-	left: -200px;
+.highlight:hover {
+    opacity: 1 !important;
+    overflow: visible;
+    z-index: 1;
 }
-
 .highlight:hover .highlight-content {
-	opacity: 1;
-	-webkit-transition: 1s ease opacity;
-	-moz-transition: 1s ease opacity;
-	-ms-transition: 1s ease opacity;
-	-o-transition: 1s ease opacity;
-	transition: 1s ease opacity;
+    -moz-transition: 1s ease opacity;
+    -ms-transition: 1s ease opacity;
+    -o-transition: 1s ease opacity;
+    -webkit-transition: 1s ease opacity;
+    opacity: 1;
+    transition: 1s ease opacity;
 }
-
-.description li {
-	margin: 10px 0
-}
-
-#vote {
-	position: absolute;
-	right: 0;
-	top: 10px;
-	margin-right: 10px;
-}
-
-.social {
-	float: left;
-}
-
-.social div {
-	display: inline;
-}
-
+.social { float: left }
+.social div { display: inline }
+.clearfix { zoom: 1 }
 .clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-
-.clearfix {
-	zoom: 1;
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
 }
