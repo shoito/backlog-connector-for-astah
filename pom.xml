@@ -10,7 +10,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.astah</groupId>
 	<artifactId>connector-backlog</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 	<packaging>bundle</packaging>
 	<name>%bundle.name</name>
 	<description>%bundle.description</description>
