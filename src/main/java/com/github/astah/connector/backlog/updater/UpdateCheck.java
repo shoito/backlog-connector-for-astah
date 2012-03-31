@@ -31,15 +31,3 @@ public class UpdateCheck {
 		this.version = version;
 	}
 }
-/*
-http://dl.dropbox.com/u/227786/app/astah/plugins/connector-backlog/update.xml
-*/
-
-/*
-<?xml version='1.0' encoding='UTF-8'?>
-<update xmlns='http://plugin.astah.net/update/response' protocol='1.0'>
-  <plugin id='com.github.astah.connector.backlog'>
-    <updatecheck codebase='http://dl.dropbox.com/u/227786/app/astah/plugins/connector-backlog/connector-backlog.jar' version='0.1.1' />
-  </plugin>
-</update>
-*/
