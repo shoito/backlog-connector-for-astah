@@ -12,10 +12,11 @@ import org.apache.commons.lang.ObjectUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.change_vision.jude.api.inf.project.ProjectAccessorFactory;
+
 public class ConfigurationUtils {
 	private static final Logger logger = LoggerFactory.getLogger(ConfigurationUtils.class);
 	
-	public static final File CONFIG_FILE = new File(System.getProperty("user.home") + File.separator + ".astah" + File.separator + "plugins", "backlog-connector.properties");
 	private static final String ENCRYPT_KEY = "Backlog";
 	private static final String ENCODING = "iso-8859-1";
 	public static final String SPACE = "space";
@@ -23,20 +24,29 @@ public class ConfigurationUtils {
 	public static final String PASSWORD = "password";
 	public static final String UPDATE_CHECK = "updateCheck";
 	
+	public static String EDITION;
+	public static File CONFIG_FILE;
+	
+	static {
+		try {
+			EDITION = ProjectAccessorFactory.getProjectAccessor().getAstahEdition();
+		} catch (ClassNotFoundException e) {
+			EDITION = "professional";
+		}
+		
+		CONFIG_FILE = new File(
+				System.getProperty("user.home") + File.separator + ".astah" + File.separator + EDITION,
+				"backlog-connector.properties");
+	}
+	
 	public static Map<String, String> load() {
 		Map<String, String> ret = new HashMap<String, String>();
-		
-		FileInputStream fis = null;
+
     	Properties config = null;
     	try {
+    		CONFIG_FILE.createNewFile();
 			config = new Properties();
-			if(!CONFIG_FILE.canRead()) {
-				logger.error("Can't load configuration");
-				return ret;
-			}
-			
-			fis = new FileInputStream(CONFIG_FILE);
-			config.load(fis);
+			config.load(new FileInputStream(CONFIG_FILE));
 			if (!config.isEmpty()) {
 				String space = (String) config.getProperty(SPACE);
 				String userName = (String) config.getProperty(USER_NAME);
@@ -49,37 +59,22 @@ public class ConfigurationUtils {
 				ret.put(UPDATE_CHECK, (String) ObjectUtils.defaultIfNull(updateCheck, "true"));
 			}
 		} catch (Exception e) {
-			logger.error("Can't load configuration", e);
-		} finally {
-			if (fis != null) {
-				try { fis.close(); } catch (IOException e) {}
-			}
+			logger.warn("Can't load configuration", e);
 		}
     	
     	return ret;
 	}
 	
 	public static void save(String space, String userName, String password) {
-		if (!CONFIG_FILE.exists() && !CONFIG_FILE.getParentFile().mkdirs()) {
-			logger.error("Can't save configuration");
-			return;
-		}
-		
-		FileOutputStream fis = null;
-		Properties config = null;
     	try {
-    		fis = new FileOutputStream(CONFIG_FILE);
-			config = new Properties();
+    		CONFIG_FILE.createNewFile();
+    		Properties config = new Properties();
 			config.setProperty(SPACE, space);
 			config.setProperty(USER_NAME, userName);
 			config.setProperty(PASSWORD, new String(PasswordUtils.encrypt(ENCRYPT_KEY, password), ENCODING));
-			config.store(fis, "");
+			config.store(new FileOutputStream(CONFIG_FILE), "");
 		} catch (Exception e) {
 			logger.warn("Can't save configuration", e);
-		} finally {
-			if (fis != null) {
-				try { fis.close(); } catch (IOException e) {}
-			}
 		}
 	}
 }

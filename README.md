@@ -6,35 +6,39 @@ astah community, UML, professionalの何れかにインストールして利用�
 
 インストール
 ---
-astahのインストールフォルダ/plugins に connector-backlog-x.x.x.jar ファイルをコピーしてastahを再起動します。
+`astahのインストールフォルダ/plugins/` に **connector-backlog-x.x.x.jar** ファイルをコピーしてastahを再起動します。
 
 ### astahバージョン6.5以上のインストール
 この辺から各OS用のインストーラーをダウンロードして、実行します。
 
-http://astah.change-vision.com/ja/product/astah-community.html
+<http://astah.change-vision.com/ja/product/astah-community.html>
+
+<http://astah.change-vision.com/ja/product/astah-uml.html>
+
+<http://astah.change-vision.com/ja/product/astah-professional.html>
 
 アンインストール
 ---
-astahのインストールフォルダ/plugins から connector-backlog-x.x.x.jar ファイルを削除してastahを再起動します。
+`astahのインストールフォルダ/plugins/` から **connector-backlog-x.x.x.jar** ファイルを削除してastahを再起動します。
 
 使用方法
 ---
 プロトタイプレベルなので、Youtube動画をご覧いただければ十分です。
 
-http://www.youtube.com/watch?v=kh61BBOTyRg
+<http://www.youtube.com/watch?v=kh61BBOTyRg>
 
 フィードバック
 ---
-感想、要望、不具合などありましたら @shoito へツイートいただけると嬉しいです。
+感想、要望、不具合などありましたら [@shoito](http://twitter.com/shoito) へツイートいただけると嬉しいです。
 
 リファレンス
 ---
 
 ### Backlog official site
-http://www.backlog.jp/
+<http://www.backlog.jp/>
 
 ### astah product site
-http://astah.change-vision.com/
+<http://astah.change-vision.com/>
 
 ### Demo Video
 [Backlog Connector for astah | youtube](http://www.youtube.com/watch?v=kh61BBOTyRg)
@@ -46,4 +50,4 @@ License
 ---
 Copyright 2011 shoito.
 
-Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
+Licensed under the Apache License, Version 2.0: <http://www.apache.org/licenses/LICENSE-2.0>

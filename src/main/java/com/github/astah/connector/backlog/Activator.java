@@ -4,7 +4,6 @@ package com.github.astah.connector.backlog;
 import java.io.IOException;
 import java.util.Map;
 
-
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;

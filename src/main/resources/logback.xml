@@ -6,13 +6,16 @@
 		</encoder>
 	</appender>
 
+	<define name="astah.edition" class="com.github.astah.connector.backlog.AstahEditionPropertyDefiner">
+	</define>
+
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>${user.home}/.astah/plugins/backlog-connector.log</File>
+		<File>${user.home}/.astah/${astah.edition}/backlog-connector.log</File>
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>INFO</level>
 		</filter>
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>backlog-connector.%i.log.zip</FileNamePattern>
+			<FileNamePattern>${user.home}/.astah/${astah.edition}/backlog-connector.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
 			<MaxIndex>3</MaxIndex>
 		</rollingPolicy>
