@@ -7,6 +7,7 @@ astah community, UML, professionalの何れかにインストールして利用�
 インストール
 ---
 `astahのインストールフォルダ/plugins/` に **connector-backlog-x.x.x.jar** ファイルをコピーしてastahを再起動します。
+[こちら](https://github.com/shoito/backlog-connector-for-astah/downloads)からダウンロードしてください。
 
 ### astahバージョン6.5以上のインストール
 この辺から各OS用のインストーラーをダウンロードして、実行します。
