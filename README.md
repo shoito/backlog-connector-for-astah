@@ -4,6 +4,8 @@ Backlog Connector for Astah
 
 astah community, UML, professionalの何れかにインストールして利用します。なお、プラグインはastahのバージョン6.5以上であれば利用可能です。
 
+Cacooで作成した図をastahの図上にドラッグ＆ドロップで取り込めるastahプラグイン、Cacooインポートプラグインは[こちら](https://github.com/shoito/astah-cacoo-plugin)
+
 インストール
 ---
 `astahのインストールフォルダ/plugins/` に **connector-backlog-x.x.x.jar** ファイルをコピーしてastahを再起動します。
