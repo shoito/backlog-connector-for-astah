@@ -28,7 +28,7 @@ import com.github.astah.connector.backlog.updater.NotificationPopup.Position;
 
 public class AutoUpdater {
 	private static final Logger logger = LoggerFactory.getLogger(AutoUpdater.class);
-	private String updateXml = "https://github.com/downloads/shoito/backlog-connector-for-astah/update.xml";
+	private String updateXml = "https://raw.github.com/shoito/backlog-connector-for-astah/master/update.xml";
 	
 	public void check() throws IOException {
 		HttpClient client = new DefaultHttpClient();

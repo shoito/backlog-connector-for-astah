@@ -11,7 +11,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.astah</groupId>
 	<artifactId>connector-backlog</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 	<packaging>jar</packaging>
 	<name>Backlog Connector for Astah</name>
 	<description>This plugin allows users to access and manipulate Backlog issues through Astah</description>
